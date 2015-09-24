@@ -1,0 +1,34 @@
+{
+  "name": "dump",
+  "version": "1.0.0",
+  "description": "Repository pattern over SQL Server",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://TylerGarlick@github.com/TylerGarlick/dump.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerGarlick/dump/issues"
+  },
+  "homepage": "https://github.com/TylerGarlick/dump#readme",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.0"
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "lazy.js": "^0.4.2",
+    "sql-query": "^0.1.26",
+    "tedious": "^1.12.3"
+  }
+}
