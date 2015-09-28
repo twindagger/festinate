@@ -10,7 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/TylerGarlick/festinate.git"
   },
-  "author": "",
+  "authors": [
+    {
+      "name": "Tyler Garlick",
+      "email": "tjgarlick@gmail.com"
+    },
+    {
+      "name": "Colten Rouska",
+      "email": "crouska@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TylerGarlick/festinate/issues"
