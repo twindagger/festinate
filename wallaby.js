@@ -3,12 +3,13 @@
 module.exports = function() {
   return {
     files: [
-      '**/*.js',
+      'lib/**/*.js',
+      'test/**/*.js',
       { pattern: '**/*.test.js', ignore: true }
     ],
 
     tests: [
-      'test/**/*.test.js'
+      '**/*.test.js'
     ],
 
     env: {
@@ -17,7 +18,7 @@ module.exports = function() {
     },
 
     bootstrap: function() {
-      // require('./test/_helper');
+      require('./test/helper');
     }
   };
 };

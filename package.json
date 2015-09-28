@@ -1,5 +1,5 @@
 {
-  "name": "dump",
+  "name": "festinate",
   "version": "1.0.0",
   "description": "Repository pattern over SQL Server",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://TylerGarlick@github.com/TylerGarlick/dump.git"
+    "url": "git+https://github.com/TylerGarlick/festinate.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TylerGarlick/dump/issues"
+    "url": "https://github.com/TylerGarlick/festinate/issues"
   },
-  "homepage": "https://github.com/TylerGarlick/dump#readme",
+  "homepage": "https://github.com/TylerGarlick/festinate#readme",
   "devDependencies": {
     "chai": "^3.3.0",
     "istanbul": "^0.3.21",
