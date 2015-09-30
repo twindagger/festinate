@@ -3,6 +3,8 @@
 let chai = require('chai');
 let expect = chai.expect;
 let Festernate = require('../');
+let tedious = require('tedious');
+let types = tedious.TYPES;
 // let lazy = require('lazy');
 
 describe('Festinate', () => {
@@ -24,15 +26,16 @@ describe('Festinate', () => {
   // });
 
   it('connects', (done) => {
-    fester.select("SalesLT.Product", '*')
-      .then(function(cols){
-        // lazy(cols).each(() => {
-        //
+    let map = new Map([['address1', {type: types.VarChar, value: '450 W'}],['city', {type: types.VarChar, value:'Ephraim'}],['province', {type: types.VarChar, value: 'Utah'}],['country', {type: types.VarChar, value: 'United States'}],['postalCode', {type: types.VarChar, value: '84627'}]]);
+    fester.execute('SalesLT.create_address', map)
+      .then((rows) => {
+        console.log(rows);
+        // rows.forEach((row) => {
+        //   console.log(row);
+        //   // row.forEach((col) =>{
+        //   //   console.log(col.value);
+        //   // });
         // });
-        console.log(cols);
-        cols.forEach((col) => {
-          console.log(col.value);
-        });
         done();
       }).catch(done);
   });
