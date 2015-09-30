@@ -4,8 +4,10 @@
   "description": "Repository pattern over SQL Server",
   "main": "index.js",
   "scripts": {
-    "test": "npm run compile && mocha test --timeout 10000",
-    "compile": "babel -d src/ lib/"
+    "lint": "esw --quiet",
+    "test": "npm run compile && mocha test --timeout 5000",
+    "compile": "babel -d src/ lib/",
+    "ci": "npm run lint && npm test"
   },
   "babel": {
     "stage": 2,
@@ -39,16 +41,16 @@
     "babel-eslint": "^4.1.3",
     "babel-runtime": "^5.8.25",
     "chai": "^3.3.0",
+    "eslint": "^1.5.1",
+    "eslint-watch": "^2.1.2",
     "istanbul": "^0.3.21",
     "mocha": "^2.3.3",
     "sinon": "^1.17.0"
   },
   "dependencies": {
-    "co": "^4.6.0",
     "debug": "^2.2.0",
     "fluent-assert": "^0.5.1",
     "lazy.js": "^0.4.2",
-    "sql-query": "^0.1.26",
     "tedious": "^1.12.3"
   }
 }

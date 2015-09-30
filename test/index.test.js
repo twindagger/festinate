@@ -1,7 +1,7 @@
 'use strict';
 
-let chai = require('chai');
-let expect = chai.expect;
+// let chai = require('chai');
+// let expect = chai.expect;
 let Festernate = require('../');
 let tedious = require('tedious');
 let types = tedious.TYPES;
@@ -26,7 +26,7 @@ describe('Festinate', () => {
   // });
 
   it('connects', (done) => {
-    let map = new Map([['address1', {type: types.VarChar, value: '450 W'}],['city', {type: types.VarChar, value:'Ephraim'}],['province', {type: types.VarChar, value: 'Utah'}],['country', {type: types.VarChar, value: 'United States'}],['postalCode', {type: types.VarChar, value: '84627'}]]);
+    let map = new Map([['address1', { type: types.VarChar, value: '450 W' }],['city', { type: types.VarChar, value:'Ephraim' }],['province', { type: types.VarChar, value: 'Utah' }],['country', { type: types.VarChar, value: 'United States' }],['postalCode', { type: types.VarChar, value: '84627' }]]);
     fester.execute('SalesLT.create_address', map)
       .then((rows) => {
         console.log(rows);
