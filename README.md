@@ -18,9 +18,18 @@ let options = {
 let connection = new Festinate(options);
 
 let person = {
-  name: "Schrödinger's cat",
-  age: '9',
-  deceased: '?'
+  name: {
+    value: "Schrödinger's cat",
+    type: 'varchar'
+  },
+  age: {
+    value: 9,
+    type: 'number'
+  },
+  deceased: {
+    value: '?',
+    type: 'nvarchar'
+  }
 };
 
 connection
