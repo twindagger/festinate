@@ -2,10 +2,12 @@
 
 // let chai = require('chai');
 // let expect = chai.expect;
-let Festernate = require('../');
-let tedious = require('tedious');
-let types = tedious.TYPES;
+import Fester, { types } from '../';
+
+// let tedious = require('tedious');
+// let types = tedious.TYPES;
 // let lazy = require('lazy');
+
 
 describe('Festinate', () => {
   let fester;
@@ -13,12 +15,12 @@ describe('Festinate', () => {
   before(() => {
     connection = {
       username: 'redrocket',
-      password: '',
-      server: '',
+      password: 'kIb-oA-Hok-Uf-dUt-ac-Ar-E-or',
+      server: 'redrocket.database.windows.net',
       database: 'adventureworks',
       encrypt: true
     };
-    fester = new Festernate(connection);
+    fester = new Fester(connection);
   });
 
   // it('should succeed', () => {
@@ -26,10 +28,16 @@ describe('Festinate', () => {
   // });
 
   it('connects', (done) => {
-    let map = new Map([['address1', { type: types.VarChar, value: '450 W' }],['city', { type: types.VarChar, value:'Ephraim' }],['province', { type: types.VarChar, value: 'Utah' }],['country', { type: types.VarChar, value: 'United States' }],['postalCode', { type: types.VarChar, value: '84627' }]]);
-    fester.execute('SalesLT.create_address', map)
+    let map = {
+      address1: { type: types.varchar, value: '450 W' },
+      city: { type: types.varchar, value:'Ephraim' },
+      province: { type: types.varchar, value: 'Utah' },
+      country: { type: types.varchar, value: 'United States' },
+      postalCode: { type: types.varchar, value: '84627' }
+    };
+    fester.executeSproc('SalesLT.create_address', map)
       .then((rows) => {
-        console.log(rows);
+        console.log('test', rows);
         // rows.forEach((row) => {
         //   console.log(row);
         //   // row.forEach((col) =>{
@@ -38,5 +46,6 @@ describe('Festinate', () => {
         // });
         done();
       }).catch(done);
+    // done();
   });
 });

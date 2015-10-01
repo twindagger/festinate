@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "lint": "esw --quiet",
-    "test": "npm run compile && mocha test --timeout 5000",
-    "compile": "babel -d src/ lib/",
+    "test": "npm run build && npm run test-build && mocha --timeout 5000 test/**/*-test.js",
+    "test-build": "babel -d test/ spec/",
+    "build": "babel -d src/ lib/",
     "ci": "npm run lint && npm test"
   },
   "babel": {
     "stage": 2,
-    "only": "lib/",
     "optional": [
       "runtime",
       "es7.asyncFunctions"

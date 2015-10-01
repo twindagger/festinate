@@ -117,3 +117,4 @@ node_modules
 
 # babel
 src/
+test/
