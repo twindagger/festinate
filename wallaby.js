@@ -3,7 +3,7 @@
 module.exports = function() {
   return {
     files: [
-      'lib/**/*.js',
+      'src/**/*.js',
       'test/**/*.js',
       { pattern: '**/*.test.js', ignore: true }
     ],
@@ -18,7 +18,6 @@ module.exports = function() {
     },
 
     bootstrap: function() {
-      require('./test/helper');
     }
   };
 };
