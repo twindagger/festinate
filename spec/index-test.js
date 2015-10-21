@@ -1,6 +1,6 @@
 'use strict';
 
-import Fester from '../';
+import Fester from '../lib';
 import { expect } from 'chai';
 
 
@@ -37,20 +37,4 @@ describe('Festinate', () => {
       }).to.throw(/server/);
     });
   });
-
-  // it('connects', (done) => {
-  //   let map = {
-  //     address1: { type: 'varchar', value: '450 W' },
-  //     city: { type: 'varchar', value:'Ephraim' },
-  //     province: { type: 'varchar', value: 'Utah' },
-  //     country: { type: 'varchar', value: 'United States' },
-  //     postalCode: { type: 'varchar', value: '84627' }
-  //   };
-  //   fester.executeSproc('SalesLT.create_address', map)
-  //     .then((rows) => {
-  //       console.log('test', rows);
-  //       done();
-  //     }).catch(done);
-  //   // done();
-  // });
 });
