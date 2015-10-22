@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "esw --quiet",
-    "test": "npm run build && mocha --timeout 5000 test/**/*-test.js",
-    "build": "babel -d src/ lib/ && babel -d test/ spec/",
+    "test": "mocha --timeout 5000 --recursive spec --compilers js:babel/register",
+    "build": "babel -d src/ lib/",
     "ci": "npm run lint && npm test"
   },
   "babel": {

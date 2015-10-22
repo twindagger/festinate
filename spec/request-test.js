@@ -6,7 +6,7 @@ import proxy from 'proxyquire';
 describe('request', () => {
   let Request;
   before(() => {
-    Request = proxy('../src/Request',{
+    Request = proxy('../lib/Request',{
       './types': () => {}
     });
   });

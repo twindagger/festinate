@@ -1,6 +1,6 @@
 'use strict';
 
-import types  from '../src/types';
+import types  from '../lib/types';
 import { expect } from 'chai';
 
 describe('type', () => {

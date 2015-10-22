@@ -35,18 +35,20 @@ let person = {
 connection
   .executeSproc('create_person', person)
   .then((rows) => {
-    // if successful rows === []
+    /*
+      rows = [{ name: "Schrödinger's cat", age: 9, deceased: '?'}]
+    */
   })
-  .error((err) => {
+  .catch((err) => {
     console.error(err);
   });
 
-  connection
-    .executeSproc('get_people')
-    .then((rows) => {
-      // if successful [{ name: '' ... }]
-    })
-    .error((err) => {
+connection
+  .executeSproc('get_people')
+  .then((rows) => {
+    // if successful [{ name: '' ... }]
+  })
+  .catch((err) => {
 
-    });
+  });
 ```
