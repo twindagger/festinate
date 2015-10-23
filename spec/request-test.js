@@ -31,6 +31,12 @@ describe('request', () => {
       }).to.throw(/undefined/);
     });
 
+    it('allows value of null', () => {
+      expect(() => {
+        request.addParameters({ 'blah': { type: 'aha!', value: null } });
+      }).to.not.throw(/undefined/);
+    });
+
     it('throws an exception if type is not provided', () => {
       expect(() => {
         request.addParameters({ 'blah': { value: 'aha!' } });
