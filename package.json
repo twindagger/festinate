@@ -6,15 +6,8 @@
   "scripts": {
     "lint": "esw --quiet",
     "test": "mocha --timeout 5000 --recursive spec --compilers js:babel/register",
-    "build": "babel -d src/ lib/",
+    "build": "babel --modules commonStrict -d src/ lib/",
     "ci": "npm run lint && npm test"
-  },
-  "babel": {
-    "stage": 2,
-    "optional": [
-      "runtime",
-      "es7.asyncFunctions"
-    ]
   },
   "repository": {
     "type": "git",
